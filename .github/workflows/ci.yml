@@ -59,7 +59,3 @@ jobs:
 
       - name: Push Docker image
         run: docker push $IMAGE_NAME:${{ steps.vars.outputs.SHORT_SHA }}
-
-  scan-image:
-    needs: build-test-docker
-    runs-on: ubuntu-latest
